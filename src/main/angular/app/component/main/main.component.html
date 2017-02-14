@@ -1,0 +1,14 @@
+<div>
+    <span>Angular & TypeScript!</span>
+    <p>
+        {{text}}
+        <br/>
+        <input type="text" [(ngModel)]="text">
+    </p>
+    <div *ngIf="listItems">
+        ListItems fetched via REST Call:
+        <ul>
+            <li *ngFor="let listItem of listItems">{{listItem.id}}: {{listItem.text}}</li>
+        </ul>
+    </div>
+</div>
