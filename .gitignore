@@ -1,0 +1,21 @@
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+
+# Sass
+.sass-cache/
+*.css.map
+
+# node
+node_modules/
+**/npm-debug.log
+
+coverage/
+**/.DS_Store
+velocity.log
+
+target/
+src/main/webapp/dist
+src/main/angular/**/*.js
