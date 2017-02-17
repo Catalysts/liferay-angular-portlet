@@ -3,7 +3,7 @@
     <liferay-angular-portlet th:attr="api-url=@{__${ajaxUrl}__}">
         Loading...
     </liferay-angular-portlet>
-    <script type="text/javascript" th:src="@{~__${staticContentUrl}__(filename='dist/inline.bundle.js')}"></script>
-    <script type="text/javascript" th:src="@{~__${staticContentUrl}__(filename='dist/vendor.bundle.js')}"></script>
-    <script type="text/javascript" th:src="@{~__${staticContentUrl}__(filename='dist/main.bundle.js')}"></script>
+    <script th:each="fileName : ${jsFiles}"
+            type="text/javascript"
+            th:src="@{~__${staticContentUrl}__(filename='dist/' + ${fileName})}"></script>
 </div>

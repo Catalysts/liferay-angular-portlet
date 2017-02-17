@@ -60,6 +60,11 @@
             <version>1.14.4</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.4</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -100,7 +105,7 @@
                         </goals>
                         <phase>process-resources</phase>
                         <configuration>
-                            <arguments>run build</arguments>
+                            <arguments>${angular.build.args}</arguments>
                         </configuration>
                     </execution>
                     <execution>
@@ -128,4 +133,21 @@
         </plugins>
     </build>
 
+    <profiles>
+        <profile>
+            <id>default</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <angular.build.args>run build</angular.build.args>
+            </properties>
+        </profile>
+        <profile>
+            <id>development</id>
+            <properties>
+                <angular.build.args>run build-dev</angular.build.args>
+            </properties>
+        </profile>
+    </profiles>
 </project>

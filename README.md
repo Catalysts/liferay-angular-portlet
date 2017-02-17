@@ -19,3 +19,6 @@ Deploy the *.war* file in your Liferay portal and you can see the portlet in act
 The example comes with predefined npm scripts to execute frontend unit tests (written with jasmine, executed with karma).
 Just run *npm test* and the tests will be executed.
 The tests will be executed automatically when you run *mvn clean install* to ensure that the build is stable.
+
+You can generate test-coverage results by executing *npm run code-coverage*.
+The results will be generated in the */coverage* folder.
